@@ -58,7 +58,7 @@ h1 {
 }
 
 h2 {
-	border: 1px solid;
+	border: 5px solid purple;
 	position: absolute;
 	right: 0;
 	top: 0;
