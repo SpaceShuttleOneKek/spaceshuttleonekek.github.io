@@ -1,1 +1,47 @@
+<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><head>
+	<title>Module 4 solution</title>
+<meta charset="utf-8"><script src="SpeakHello.js"></script><script src="SpeakGoodBye.js"></script><script src="script.js"></script></head>
+ 
+ 
+  <script>
+  (function(window) {
+    var helloSpeaker = new Object();
+    var speakWord = "Hello";
+    helloSpeaker.speak = function(name) {
+        console.log(speakWord + " " + name);
+    };
+    window.helloSpeaker = helloSpeaker;
+})(window);
+  </script> 
+ <script>
+  (function(window) {
+    var byeSpeaker = new Object();
+    var speakWord = "Good Bye";
+    byeSpeaker.speak = function speak(name) {
+        console.log(speakWord + " " + name);
+    };
+    window.byeSpeaker = byeSpeaker;
+})(window);
+  </script> 
+ <script>
+  (function () {
+var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+    for (var i = 0; i < names.length; i++) {
+        var firstLetter = names[i].charAt(0).toLowerCase();
+        if (firstLetter === 'j') {
+            byeSpeaker.speak(names[i]);
+        } else {
+            helloSpeaker.speak(names[i]);
+        }
+    }
+})();
+  </script> 
+ 
 
+
+<body>
+	<h1>Solution of Module 4</h1>
+  <p>Solution is in the console. Have a nice day!</p>
+
+
+</body></html>
